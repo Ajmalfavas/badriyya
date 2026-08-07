@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Badriyya — A Moral Hub | Moulding The Generation</title>
+  <meta name="description"
+    content="Badriyya is a moral hub and educational trust committed to moulding generations through quality education, social service, and community development in Nediyanad, Kerala." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1a3a6b;
+      --blue: #2563a8;
+      --sky: #3b9ad4;
+      --light-sky: #87ceeb;
+      --pale: #e8f4fd;
+      --white: #ffffff;
+      --text-dark: #0f2447;
+      --text-mid: #2d5380;
+      --text-light: #6b93b8;
+      --accent: #4db8e8;
+      --green: #27ae60;
+      --shadow: 0 8px 40px rgba(26, 58, 107, 0.10);
+      --shadow-lg: 0 20px 60px rgba(26, 58, 107, 0.16);
+      --radius: 16px;
+      --transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .section-sub {
+      margin-top: 14px;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.8;
+      max-width: 600px;
+    }
+
+    .divider {
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--sky), var(--accent));
+      border-radius: 99px;
+      margin-top: 22px;
+    }
+
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ══ NAV ══ */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0 28px;
+      transition: background var(--transition), box-shadow var(--transition);
+    }
+
+    nav.scrolled {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 24px rgba(26, 58, 107, 0.10);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .nav-brand-tag {
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: var(--text-light);
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      position: relative;
+      transition: color var(--transition);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--sky);
+      border-radius: 99px;
+      transition: width var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--navy);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--blue), var(--sky));
+      color: var(--white) !important;
+      padding: 9px 22px;
+      border-radius: 99px;
+      font-weight: 500 !important;
+      transition: box-shadow var(--transition), transform var(--transition) !important;
+    }
+
+    .nav-cta::after {
+      display: none !important;
+    }
+
+    .nav-cta:hover {
+      box-shadow: 0 6px 24px rgba(37, 99, 168, 0.35) !important;
+      transform: translateY(-1px);
+    }
+
+    /* ══ HERO ══ */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 75% 50%, rgba(75, 184, 232, 0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(37, 99, 168, 0.08) 0%, transparent 70%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 100px 0 80px;
+    }
+
+    .hero-content {
+      position: relative;
+    }
+
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--pale);
+      border: 1px solid rgba(75, 184, 232, 0.3);
+      border-radius: 99px;
+      padding: 6px 16px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--sky);
+      letter-spacing: 0.06em;
+      margin-bottom: 28px;
+    }
+
+    .hero-tagline-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sky);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.7);
+      }
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--sky);
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 40px;
+      max-width: 480px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: var(--white);
+      padding: 14px 30px;
+      border-radius: 99px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 10px 30px rgba(26, 58, 107, 0.30);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--navy);
+      border: 1.5px solid rgba(26, 58, 107, 0.25);
+      padding: 14px 30px;
+      border-radius: 99px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: border-color var(--transition), background var(--transition), transform var(--transition);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--sky);
+      background: var(--pale);
+      transform: translateY(-2px);
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-logo-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-logo-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid;
+      animation: spin-slow linear infinite;
+    }
+
+    .ring-1 {
+      width: 380px;
+      height: 380px;
+      border-color: rgba(75, 184, 232, 0.18);
+      animation-duration: 30s;
+    }
+
+    .ring-2 {
+      width: 460px;
+      height: 460px;
+      border-color: rgba(37, 99, 168, 0.10);
+      animation-duration: 45s;
+      animation-direction: reverse;
+    }
+
+    @keyframes spin-slow {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .hero-logo-circle {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: var(--pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-logo-circle img {
+      width: 200px;
+      height: auto;
+    }
+
+    .hero-float-card {
+      position: absolute;
+      background: var(--white);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 14px 20px;
+      border: 1px solid rgba(75, 184, 232, 0.2);
+      z-index: 2;
+    }
+
+    .hero-float-card.card-1 {
+      bottom: 30px;
+      left: -20px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .hero-float-card.card-2 {
+      top: 40px;
+      right: -20px;
+      animation: float 4s ease-in-out infinite 1.5s;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .float-card-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .float-card-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text-light);
+      letter-spacing: 0.04em;
+      margin-top: 2px;
+    }
+
+    /* ══ STATS ══ */
+    .stats-row {
+      padding: 50px 0;
+      border-top: 1px solid rgba(26, 58, 107, 0.07);
+      border-bottom: 1px solid rgba(26, 58, 107, 0.07);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px 16px;
+    }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-light);
+      margin-top: 6px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ══ ABOUT ══ */
+    #about {
+      padding: 110px 0;
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-bg-shape {
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(75, 184, 232, 0.12), rgba(37, 99, 168, 0.08));
+      top: -20px;
+      left: -20px;
+      z-index: 0;
+    }
+
+    .about-card-main {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      border-radius: 24px;
+      padding: 50px 40px;
+      color: var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-card-main h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .about-card-main p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      opacity: 0.85;
+    }
+
+    .about-quote {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      opacity: 0.9;
+    }
+
+    .about-card-float {
+      position: absolute;
+      z-index: 2;
+      right: -30px;
+      bottom: -24px;
+      background: var(--white);
+      border-radius: 16px;
+      padding: 20px 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(75, 184, 232, 0.2);
+    }
+
+    .about-card-float-icon {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .about-card-float-title {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--navy);
+    }
+
+    .about-card-float-sub {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-top: 3px;
+    }
+
+    .about-values {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .value-item {
+      background: var(--pale);
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid rgba(75, 184, 232, 0.18);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .value-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .value-icon {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .value-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+
+    .value-desc {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* ══ INSTITUTIONS ══ */
+    #institutions {
+      padding: 110px 0;
+      background: linear-gradient(180deg, var(--pale) 0%, var(--white) 100%);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-header .divider {
+      margin: 22px auto 0;
+    }
+
+    .inst-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .inst-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 30px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(75, 184, 232, 0.12);
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .inst-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--navy), var(--sky));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+
+    .inst-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .inst-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .inst-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--navy), var(--sky));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .inst-type {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 8px;
+    }
+
+    .inst-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .inst-desc {
+      font-size: 0.875rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ══ SOCIAL WORK ══ */
+    #social {
+      padding: 110px 0;
+      background: var(--white);
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .social-list {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .social-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 20px 24px;
+      border-radius: 14px;
+      border: 1px solid rgba(75, 184, 232, 0.15);
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      cursor: default;
+    }
+
+    .social-item:hover {
+      background: var(--pale);
+      transform: translateX(6px);
+      box-shadow: var(--shadow);
+    }
+
+    .social-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue), var(--sky));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .social-item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .social-item-desc {
+      font-size: 0.83rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .social-highlight {
+      background: linear-gradient(135deg, var(--sky) 0%, var(--blue) 60%, var(--navy) 100%);
+      border-radius: 28px;
+      padding: 56px 44px;
+      color: var(--white);
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .social-highlight-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .social-highlight h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .social-highlight p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      opacity: 0.88;
+    }
+
+    .social-highlight-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 28px;
+    }
+
+    .social-pill {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 99px;
+      padding: 6px 16px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* ══ VISION ══ */
+    #vision {
+      padding: 90px 0;
+      background: var(--navy);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #vision::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 90% 50%, rgba(75, 184, 232, 0.12) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 10% 20%, rgba(37, 99, 168, 0.25) 0%, transparent 70%);
+    }
+
+    .vision-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .vision-panel {
+      padding: 60px 52px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .vision-panel:first-child {
+      border-right: 2px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .vision-panel-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .vision-panel-label-line {
+      width: 24px;
+      height: 1.5px;
+      background: var(--accent);
+    }
+
+    .vision-panel h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .vision-panel p {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      opacity: 0.80;
+    }
+
+    /* ══ DONATION ══ */
+    #donate {
+      padding: 110px 0;
+      background: var(--pale);
+    }
+
+    .donate-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 54px;
+    }
+
+    .donate-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(75, 184, 232, 0.14);
+    }
+
+    .donate-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .donate-card-sub {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      margin-bottom: 28px;
+    }
+
+    .bank-row {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .bank-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 14px 16px;
+      background: var(--pale);
+      border-radius: 10px;
+      gap: 12px;
+    }
+
+    .bank-item-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 3px;
+    }
+
+    .bank-item-val {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .gpay-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    /* QR Code */
+    .qr-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 16px 0 8px;
+    }
+
+    .qr-wrap img {
+      width: 160px;
+      height: 160px;
+      border-radius: 14px;
+      border: 2px solid rgba(26, 58, 107, 0.12);
+      padding: 10px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      display: block;
+    }
+
+    .qr-fallback {
+      width: 160px;
+      height: 160px;
+      border-radius: 14px;
+      border: 2px dashed rgba(26, 58, 107, 0.2);
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    .qr-label {
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-light);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .gpay-num {
+      background: var(--pale);
+      border-radius: 10px;
+      padding: 12px 10px;
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .donate-note {
+      margin-top: 20px;
+      padding: 14px 16px;
+      background: rgba(39, 174, 96, 0.08);
+      border: 1px solid rgba(39, 174, 96, 0.2);
+      border-radius: 10px;
+      font-size: 0.82rem;
+      color: #1a6e3c;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    /* ══ CONTACT ══ */
+    #contact {
+      padding: 110px 0;
+      background: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .contact-item-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--pale);
+      border: 1px solid rgba(75, 184, 232, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-title {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .contact-item-val {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+    }
+
+    .contact-item-val a {
+      color: var(--sky);
+    }
+
+    .contact-item-val a:hover {
+      text-decoration: underline;
+    }
+
+    /* Social links row */
+    .social-links-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .soc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border: 1.5px solid;
+      transition: background var(--transition), color var(--transition), transform var(--transition);
+    }
+
+    .soc-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .soc-btn.yt {
+      border-color: #ff0000;
+      color: #ff0000;
+    }
+
+    .soc-btn.yt:hover {
+      background: #ff0000;
+      color: #fff;
+    }
+
+    .soc-btn.wa {
+      border-color: #25d366;
+      color: #25d366;
+    }
+
+    .soc-btn.wa:hover {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .soc-btn.fb {
+      border-color: #1877f2;
+      color: #1877f2;
+    }
+
+    .soc-btn.fb:hover {
+      background: #1877f2;
+      color: #fff;
+    }
+
+    .soc-btn.ig {
+      border-color: #c13584;
+      color: #c13584;
+    }
+
+    .soc-btn.ig:hover {
+      background: #c13584;
+      color: #fff;
+    }
+
+    .soc-btn.tw {
+      border-color: #1da1f2;
+      color: #1da1f2;
+    }
+
+    .soc-btn.tw:hover {
+      background: #1da1f2;
+      color: #fff;
+    }
+
+    .soc-btn.tg {
+      border-color: #0088cc;
+      color: #0088cc;
+    }
+
+    .soc-btn.tg:hover {
+      background: #0088cc;
+      color: #fff;
+    }
+
+    .contact-form {
+      background: var(--pale);
+      border-radius: 24px;
+      padding: 44px 40px;
+      border: 1px solid rgba(75, 184, 232, 0.18);
+    }
+
+    .contact-form h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      margin-bottom: 7px;
+      letter-spacing: 0.03em;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid rgba(37, 99, 168, 0.15);
+      border-radius: 10px;
+      background: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--sky);
+      box-shadow: 0 0 0 3px rgba(75, 184, 232, 0.15);
+    }
+
+    .form-group textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: box-shadow var(--transition), transform var(--transition);
+      margin-top: 8px;
+    }
+
+    .btn-submit:hover {
+      box-shadow: 0 8px 24px rgba(26, 58, 107, 0.28);
+      transform: translateY(-2px);
+    }
+
+    /* ══ FOOTER ══ */
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand img {
+      height: 70px;
+      width: auto;
+      margin-bottom: 16px;
+      background: var(--white);
+      border-radius: 14px;
+      padding: 8px 12px;
+      display: block;
+    }
+
+    .footer-brand p {
+      font-size: 0.875rem;
+      opacity: 0.65;
+      line-height: 1.7;
+      max-width: 260px;
+    }
+
+    .footer-col-title {
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .footer-links a {
+      font-size: 0.875rem;
+      opacity: 0.7;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    .footer-social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-soc-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .footer-soc-icon:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      opacity: 0.55;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+
+      .hero-grid,
+      .about-grid,
+      .social-grid,
+      .vision-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .donate-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .ring-1 {
+        width: 260px;
+        height: 260px;
+      }
+
+      .ring-2 {
+        width: 320px;
+        height: 320px;
+      }
+
+      .hero-logo-circle {
+        width: 200px;
+        height: 200px;
+      }
+
+      .hero-logo-circle img {
+        width: 140px;
+      }
+
+      .hero-float-card {
+        display: none;
+      }
+
+      .inst-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .vision-panel:first-child {
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .inst-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-values {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gpay-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══ NAV ══ -->
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="logo.png" alt="Badriyya Logo" />
+        <div class="nav-brand">
+          <span class="nav-brand-name">Badriyya</span>
+          <span class="nav-brand-tag">A Moral Hub</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#institutions">Institutions</a></li>
+        <li><a href="#social">Social Work</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tagline">
+            <span class="hero-tagline-dot"></span>
+            Moulding The Generation
+          </div>
+          <h1 class="hero-title">Education &amp; Values,<br /><em>Intertwined</em></h1>
+          <p class="hero-desc">
+            Badriyya is a moral hub — a trust-driven institution nurturing academic excellence,
+            moral integrity, and social consciousness. Based in Nediyanad, Kerala.
+          </p>
+          <div class="hero-actions">
+            <a href="#institutions" class="btn-primary">
+              Our Institutions
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#donate" class="btn-outline">Support Us</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-logo-wrap">
+            <div class="hero-logo-ring ring-1"></div>
+            <div class="hero-logo-ring ring-2"></div>
+            <div class="hero-logo-circle">
+              <img src="logo.png" alt="Badriyya — A Moral Hub" />
+            </div>
+            <div class="hero-float-card card-1">
+              <div class="float-card-num">500+</div>
+              <div class="float-card-label">Students</div>
+            </div>
+            <div class="hero-float-card card-2">
+              <div class="float-card-num">15+</div>
+              <div class="float-card-label">Academic Staff</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ STATS ══ -->
+  <div class="stats-row">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Students Enrolled</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num">12+</div>
+          <div class="stat-label">Active Programmes</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Academic Staff</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Non-Teaching Staff</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <div class="about-bg-shape"></div>
+          <div class="about-card-main">
+            <h3>A Legacy of<br />Moral Excellence</h3>
+            <p>Founded with the conviction that knowledge must be paired with character, Badriyya — Badriyya Dars
+              Charitable Trust has grown into a network of institutions dedicated to holistic human development across
+              Nediyanad and beyond.</p>
+            <div class="about-quote">"Rooted in values. Rising with purpose."</div>
+          </div>
+          <div class="about-card-float">
+            <div class="about-card-float-icon">🏆</div>
+            <div class="about-card-float-title">Charitable Trust</div>
+            <div class="about-card-float-sub">Serving the Community</div>
+          </div>
+        </div>
+        <div class="reveal">
+          <span class="section-label">About Us</span>
+          <h2 class="section-title">Nurturing Minds,<br />Building Character</h2>
+          <p class="section-sub">Badriyya is more than an educational trust — it is a movement. We believe that true
+            education transforms not just the mind, but the soul, cultivating generations who lead with knowledge and
+            serve with compassion.</p>
+          <div class="divider"></div>
+          <div class="about-values">
+            <div class="value-item">
+              <div class="value-icon">📖</div>
+              <div class="value-title">Quality Education</div>
+              <div class="value-desc">Academic excellence guided by modern pedagogy</div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🌙</div>
+              <div class="value-title">Moral Values</div>
+              <div class="value-desc">Character-first approach rooted in Islamic ethics</div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🤝</div>
+              <div class="value-title">Community Service</div>
+              <div class="value-desc">Active social welfare and outreach programmes</div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🌱</div>
+              <div class="value-title">Holistic Growth</div>
+              <div class="value-desc">Physical, spiritual, and intellectual development</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ INSTITUTIONS ══ -->
+  <section id="institutions">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Network</span>
+        <h2 class="section-title">Current Programmes &amp; Institutions</h2>
+        <p class="section-sub" style="margin:14px auto 0;">A diverse family of educational and community programmes,
+          each committed to the highest standards of learning and moral development.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="inst-grid">
+        <div class="inst-card reveal">
+          <div class="inst-icon">📿</div>
+          <div class="inst-type">Islamic Studies</div>
+          <div class="inst-name">C. Usthad Memorial Dars</div>
+          <div class="inst-desc">A traditional dars offering classical Islamic sciences in memory of
+            the late C. Usthad, nurturing scholars rooted in authentic scholarship.</div>
+        </div>
+        <div class="inst-card reveal">
+          <div class="inst-icon">🧠</div>
+          <div class="inst-type">Academic Excellence</div>
+          <div class="inst-name">IQ Academy</div>
+          <div class="inst-desc">A centre of intellectual development focused on enhancing academic performance,
+            critical thinking, and conceptual clarity for students.</div>
+        </div>
+        <div class="inst-card reveal">
+          <div class="inst-icon">📖</div>
+          <div class="inst-type">Quranic Education</div>
+          <div class="inst-name">Hifzul Quran</div>
+          <div class="inst-desc">A dedicated Quran memorisation programme providing students with the guidance and
+            environment to achieve complete memorisation of the Holy Quran.</div>
+        </div>
+        <div class="inst-card reveal">
+          <div class="inst-icon">🌟</div>
+          <div class="inst-type">Early Childhood</div>
+          <div class="inst-name">Zee One Pre-School</div>
+          <div class="inst-desc">A stimulating early childhood education programme nurturing the youngest minds with a
+            value-based, play-centred learning approach.</div>
+        </div>
+        <div class="inst-card reveal">
+          <div class="inst-icon">🏫</div>
+          <div class="inst-type">Islamic School</div>
+          <div class="inst-name">Hi-Tech School Madrasa</div>
+          <div class="inst-desc">A modern madrasa blending traditional Islamic education with contemporary teaching
+            methods and digital learning tools.</div>
+        </div>
+        <div class="inst-card reveal">
+          <div class="inst-icon">🎓</div>
+          <div class="inst-type">Youth Development</div>
+          <div class="inst-name">Youth School</div>
+          <div class="inst-desc">Empowering young men and women with leadership skills, moral grounding, and academic
+            excellence to shape the next generation of leaders.</div>
+        </div>
+        <div class="inst-card reveal">
+          <div class="inst-icon">📱</div>
+          <div class="inst-type">Digital Literacy</div>
+          <div class="inst-name">Girls Model Academy</div>
+          <div class="inst-desc">A pioneering programme providing girls with digital literacy, moral values,
+            and online safety awareness in a supportive environment.</div>
+        </div>
+        <div class="inst-card reveal">
+          <div class="inst-icon">💻</div>
+          <div class="inst-type">Online Learning</div>
+          <div class="inst-name">Online &amp; Reading Room</div>
+          <div class="inst-desc">A well-resourced reading room and online learning space open to students and the
+            community for self-directed study and digital education.</div>
+        </div>
+        <div class="inst-card reveal">
+          <div class="inst-icon">🤲</div>
+          <div class="inst-type">Welfare</div>
+          <div class="inst-name">Relief Fund</div>
+          <div class="inst-desc">A structured relief fund extending financial assistance to families and individuals in
+            need, ensuring no one is left behind in times of hardship.</div>
+        </div>
+        <div class="inst-card reveal">
+          <div class="inst-icon">🕌</div>
+          <div class="inst-type">Community Centre</div>
+          <div class="inst-name">Juma Masjid</div>
+          <div class="inst-desc">The central masjid serving as the spiritual heart of the community — a place of
+            worship, learning, and community gathering.</div>
+        </div>
+        <div class="inst-card reveal">
+          <div class="inst-icon">🎤</div>
+          <div class="inst-type">Annual Event</div>
+          <div class="inst-name">Annual Gathering (Jalsa)</div>
+          <div class="inst-desc">An annual convention bringing together scholars, students, and the wider community to
+            celebrate knowledge, honour achievements, and renew purpose.</div>
+        </div>
+        <div class="inst-card reveal">
+          <div class="inst-icon">🌺</div>
+          <div class="inst-type">Spiritual Programme</div>
+          <div class="inst-name">Soofna Centre</div>
+          <div class="inst-desc">A dedicated centre for spiritual growth, mindfulness, and moral enrichment, supporting
+            the inner development of students and community members.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SOCIAL WORK ══ -->
+  <section id="social">
+    <div class="container">
+      <div class="social-grid">
+        <div>
+          <span class="section-label reveal">Social Service</span>
+          <h2 class="section-title reveal">Serving the Community with Purpose</h2>
+          <p class="section-sub reveal">Beyond the classroom, Badriyya extends its reach through meaningful social
+            initiatives that uplift lives, strengthen communities, and embody the values we teach.</p>
+          <div class="social-list">
+            <div class="social-item reveal">
+              <div class="social-icon">🍽️</div>
+              <div>
+                <div class="social-item-title">Food Welfare Programmes</div>
+                <div class="social-item-desc">Regular food distribution drives and community kitchen initiatives for the
+                  underprivileged.</div>
+              </div>
+            </div>
+            <div class="social-item reveal">
+              <div class="social-icon">🏥</div>
+              <div>
+                <div class="social-item-title">Health &amp; Medical Camps</div>
+                <div class="social-item-desc">Free medical check-ups, health awareness camps, and medical aid for those
+                  in need.</div>
+              </div>
+            </div>
+            <div class="social-item reveal">
+              <div class="social-icon">📜</div>
+              <div>
+                <div class="social-item-title">Scholarship Programmes</div>
+                <div class="social-item-desc">Financial assistance ensuring deserving students are never deprived of
+                  quality education.</div>
+              </div>
+            </div>
+            <div class="social-item reveal">
+              <div class="social-icon">🏠</div>
+              <div>
+                <div class="social-item-title">Disaster Relief &amp; Rehabilitation</div>
+                <div class="social-item-desc">Swift response and rehabilitation support during natural disasters and
+                  community crises.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="social-highlight">
+            <div class="social-highlight-icon">🌍</div>
+            <h3>A Community That Cares</h3>
+            <p>Social responsibility is woven into the fabric of Badriyya. Every initiative is a testament to our belief
+              that an institution's true measure is the lives it transforms beyond its walls.</p>
+            <div class="social-highlight-pills">
+              <span class="social-pill">Food Aid</span>
+              <span class="social-pill">Healthcare</span>
+              <span class="social-pill">Education Support</span>
+              <span class="social-pill">Disaster Relief</span>
+              <span class="social-pill">Women Empowerment</span>
+              <span class="social-pill">Youth Development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VISION & MISSION ══ -->
+  <section id="vision">
+    <div class="container vision-inner">
+      <div class="vision-grid reveal">
+        <div class="vision-panel">
+          <div class="vision-panel-label">
+            <div class="vision-panel-label-line"></div>Our Vision
+          </div>
+          <h3>A World Shaped by Knowledge &amp; Virtue</h3>
+          <p>To be a transformative force in society — shaping generations of educated, morally upright, and socially
+            conscious individuals who contribute meaningfully to the world around them.</p>
+        </div>
+        <div class="vision-panel">
+          <div class="vision-panel-label">
+            <div class="vision-panel-label-line"></div>Our Mission
+          </div>
+          <h3>Excellence in Education, Empathy in Action</h3>
+          <p>To deliver exceptional education grounded in ethical values, foster community well-being through active
+            social service, and empower every individual under our care to realise their fullest potential.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ DONATE ══ -->
+  <section id="donate">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:left;">
+        <span class="section-label">Support the Cause</span>
+        <h2 class="section-title">Donate &amp; Make a Difference</h2>
+        <p class="section-sub">Your generosity powers education, sustains scholarships, and fuels social welfare. Every
+          contribution, big or small, transforms lives.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="donate-grid">
+
+        <!-- Bank: Badriyya Dars Charitable Trust -->
+        <div class="donate-card reveal">
+          <div class="donate-card-title">🏦 Bank Transfer</div>
+          <div class="donate-card-sub">Badriyya Dars Charitable Trust</div>
+          <div class="bank-row">
+            <div class="bank-item">
+              <div>
+                <div class="bank-item-label">Account Name</div>
+                <div class="bank-item-val">Badriyya Dars Charitable Trust</div>
+              </div>
+            </div>
+            <div class="bank-item">
+              <div>
+                <div class="bank-item-label">Account Number</div>
+                <div class="bank-item-val">26070200001066</div>
+              </div>
+            </div>
+            <div class="bank-item">
+              <div>
+                <div class="bank-item-label">IFSC Code</div>
+                <div class="bank-item-val">FDRL0002607</div>
+              </div>
+            </div>
+            <div class="bank-item">
+              <div>
+                <div class="bank-item-label">Bank &amp; Branch</div>
+                <div class="bank-item-val">Federal Bank — Narikkuni</div>
+              </div>
+            </div>
+          </div>
+          <div class="donate-note">
+            <span>✅</span>
+            <span>Donations are accepted for educational support, scholarships, and social welfare programmes.</span>
+          </div>
+        </div>
+
+        <!-- Google Pay -->
+        <div class="donate-card reveal">
+          <div class="donate-card-title">📲 Google Pay / UPI</div>
+          <div class="donate-card-sub">Scan the QR code or use any of the numbers below to donate instantly</div>
+
+          <!-- QR Code -->
+          <div class="qr-wrap">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&color=1a3a6b&bgcolor=ffffff&data=upi%3A%2F%2Fpay%3Fpa%3D8606728003%40okbizaxis%26pn%3DBadriyya%2BDars%2BCharitable%2BTrust%26cu%3DINR"
+              alt="UPI QR Code — Badriyya Dars Charitable Trust" width="160" height="160"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="qr-fallback" style="display:none;">QR unavailable offline</div>
+          </div>
+          <div class="qr-label">Scan with any UPI app to donate</div>
+
+          <!-- Numbers -->
+          <div class="gpay-grid" style="margin-top:18px;">
+            <div class="gpay-num">+91 97458 72219</div>
+            <div class="gpay-num">+91 86067 28003</div>
+            <div class="gpay-num">+91 97470 95305</div>
+          </div>
+          <div class="donate-note" style="margin-top:16px;">
+            <span>💚</span>
+            <span>Send your donation directly via Google Pay, PhonePe, or any UPI app.</span>
+          </div>
+          <div style="margin-top: 24px;">
+            <div class="donate-card-title" style="font-size:1.1rem; margin-bottom:6px;">💬 Reach Us on WhatsApp</div>
+            <a href="https://wa.me/918606728003" target="_blank" rel="noopener" class="btn-primary"
+              style="display:inline-flex; margin-top:10px; font-size:0.85rem; padding:10px 22px;">
+              WhatsApp: +91 86067 28003
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:left;">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title">We'd Love to<br />Hear from You</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="contact-grid" style="margin-top: 54px;">
+
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <div class="contact-item-title">Address</div>
+              <div class="contact-item-val">Badriyya Nediyanad, Kerala, India</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div>
+              <div class="contact-item-title">Phone</div>
+              <div class="contact-item-val">
+                <a href="tel:+918606728003">+91 86067 28003</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div>
+              <div class="contact-item-title">Email</div>
+              <div class="contact-item-val">
+                <a href="mailto:Badriyyanediyanad@gmail.com">Badriyyanediyanad@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div>
+            <div>
+              <div class="contact-item-title">Follow Us</div>
+              <div class="social-links-row">
+                <a href="https://www.youtube.com/@badriyyanediyanad" target="_blank" rel="noopener" class="soc-btn yt">▶
+                  YouTube</a>
+                <a href="https://wa.me/918606728003" target="_blank" rel="noopener" class="soc-btn wa">💬 WhatsApp</a>
+                <a href="https://www.facebook.com/badriyyakaruku" target="_blank" rel="noopener" class="soc-btn fb">f
+                  Facebook</a>
+                <a href="https://www.instagram.com/badriyyaned" target="_blank" rel="noopener" class="soc-btn ig">📷
+                  Instagram</a>
+                <a href="https://twitter.com/badriyya_n" target="_blank" rel="noopener" class="soc-btn tw">𝕏
+                  Twitter</a>
+                <a href="https://t.me/badriyyan" target="_blank" rel="noopener" class="soc-btn tg">✈ Telegram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="contact-form">
+            <h3>Send a Message</h3>
+            <div class="form-group"><label for="name">Full Name</label><input type="text" id="name"
+                placeholder="Your full name" /></div>
+            <div class="form-group"><label for="email">Email Address</label><input type="email" id="email"
+                placeholder="your@email.com" /></div>
+            <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject"
+                placeholder="How can we help?" /></div>
+            <div class="form-group"><label for="message">Message</label><textarea id="message"
+                placeholder="Write your message here..."></textarea></div>
+            <button class="btn-submit" type="button" onclick="handleSubmit()">Send Message</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Badriyya Logo" />
+          <p>Badriyya — A Moral Hub. Moulding the generation through quality education, moral values, and compassionate
+            social service. Nediyanad, Kerala.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#institutions">Institutions</a></li>
+            <li><a href="#social">Social Work</a></li>
+            <li><a href="#vision">Vision &amp; Mission</a></li>
+            <li><a href="#donate">Donate</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Our Programmes</div>
+          <ul class="footer-links">
+            <li><a href="#institutions">C. Usthad Memorial Dars</a></li>
+            <li><a href="#institutions">IQ Academy</a></li>
+            <li><a href="#institutions">Hifzul Quran</a></li>
+            <li><a href="#institutions">Hi-Tech Madrasa</a></li>
+            <li><a href="#institutions">Girls Mobile Academy</a></li>
+            <li><a href="#institutions">Youth School</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Follow Us</div>
+          <div class="footer-social-icons">
+            <a href="https://www.youtube.com/@badriyya" target="_blank" rel="noopener" class="footer-soc-icon"
+              title="YouTube">▶</a>
+            <a href="https://wa.me/918606728003" target="_blank" rel="noopener" class="footer-soc-icon"
+              title="WhatsApp">💬</a>
+            <a href="https://www.facebook.com/badriyyakaruku" target="_blank" rel="noopener" class="footer-soc-icon"
+              title="Facebook">f</a>
+            <a href="https://www.instagram.com/badriyyaned" target="_blank" rel="noopener" class="footer-soc-icon"
+              title="Instagram">📷</a>
+            <a href="https://twitter.com/badriyya_n" target="_blank" rel="noopener" class="footer-soc-icon"
+              title="Twitter">𝕏</a>
+            <a href="https://t.me/badriyyan" target="_blank" rel="noopener" class="footer-soc-icon"
+              title="Telegram">✈</a>
+          </div>
+          <div style="margin-top: 20px;">
+            <div class="footer-col-title">Contact</div>
+            <ul class="footer-links">
+              <li><a href="tel:+918606728003">+91 86067 28003</a></li>
+              <li><a href="mailto:Badriyyanediyanad@gmail.com">Badriyyanediyanad@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Badriyya Charitable Trust. All rights reserved.</span>
+        <span>Moulding The Generation..</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    function handleSubmit() {
+      const btn = document.querySelector('.btn-submit');
+      btn.textContent = 'Message Sent!';
+      btn.style.background = 'linear-gradient(135deg, #2a9d60, #27ae60)';
+      setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.style.background = '';
+      }, 3000);
+    }
+  </script>
+</body>
+
+</html>
